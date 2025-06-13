@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+@layer components {
+    .prize-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .prize-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+    #idea-results ul {
+        list-style-position: inside;
+        padding-left: 0;
+    }
+    #idea-results li {
+        background-color: rgba(255, 255, 255, 0.05);
+        margin-bottom: 8px;
+        padding: 12px;
+        border-radius: 8px;
+        border-left: 4px solid #3B82F6;
+    }
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 200px;
+        background-color: #525252;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -100px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
+    .countdown-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    .countdown-item {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 8px;
+        min-width: 80px;
+    }
+}
