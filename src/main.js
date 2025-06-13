@@ -56,13 +56,14 @@ generateBtn.addEventListener('click', async () => {
 
 // --- Contador Regresivo ---
 function updateCountdown() {
-    const targetDate = new Date('2025-06-18T12:00:00-05:00'); // Domingo 18 de junio a las 12:00 PM
+    const targetDate = new Date('2025-06-17T12:00:00-05:00'); // 17 de junio 2025 a las 12:00 PM
     const now = new Date();
     const diff = targetDate - now;
 
     if (diff <= 0) {
-        document.getElementById('countdown').innerHTML = 
-            '<div class="countdown-item">¡SORTEO INICIADO!</div>';
+        document.getElementById('countdown').innerHTML = `
+            <p class="text-2xl font-bold text-white">¡SORTEO FINALIZADO!</p>
+            <p class="text-white">El sorteo se realizó el 17 de junio de 2025.</p>`;
         return;
     }
 
@@ -71,10 +72,24 @@ function updateCountdown() {
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    document.getElementById('days').textContent = days.toString().padStart(2, '0');
-    document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-    document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-    document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    document.getElementById('countdown').innerHTML = `
+        <p class="text-2xl font-bold text-white">El sorteo se realizará el</p>
+        <p class="text-4xl font-bold text-white">LUNES</p>
+        <div class="flex gap-4 mt-4">
+            <div class="bg-white/10 p-4 rounded-lg">
+                <p class="text-white">${days.toString().padStart(2, '0')} Días</p>
+            </div>
+            <div class="bg-white/10 p-4 rounded-lg">
+                <p class="text-white">${hours.toString().padStart(2, '0')} Horas</p>
+            </div>
+            <div class="bg-white/10 p-4 rounded-lg">
+                <p class="text-white">${minutes.toString().padStart(2, '0')} Minutos</p>
+            </div>
+            <div class="bg-white/10 p-4 rounded-lg">
+                <p class="text-white">${seconds.toString().padStart(2, '0')} Segundos</p>
+            </div>
+        </div>
+        <p class="text-white mt-4">¡Mucho suerte a todos los participantes!</p>`;
 }
 
 // Actualizar el contador cada segundo
