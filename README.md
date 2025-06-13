@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sorteo Tech - Infografía Web Interactiva
 
 ## Descripción
@@ -89,3 +90,7 @@ MIT License
 - La API de Gemini está deshabilitada por defecto. Para activarla, necesitarás configurar tu propia API key.
 - El contador regresivo está configurado para el 18 de junio de 2025 a las 12:00 PM.
 - Los enlaces a WhatsApp y el formulario son funcionales.
+=======
+# infografia-tecnica
+Infografía Sorteo Tech - Impresión 3D y Cuentas Gemini Pro
+>>>>>>> 3399253f13a60dfe1a22d646a109bda6c74d1f27
