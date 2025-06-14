@@ -56,14 +56,14 @@ generateBtn.addEventListener('click', async () => {
 
 // --- Contador Regresivo ---
 function updateCountdown() {
-    const targetDate = new Date('2025-06-17T12:00:00-05:00'); // 17 de junio 2025 a las 12:00 PM
+    const targetDate = new Date('2025-06-16T12:00:00-05:00'); // 16 de junio 2025 a las 12:00 PM
     const now = new Date();
     const diff = targetDate - now;
 
     if (diff <= 0) {
         document.getElementById('countdown').innerHTML = `
             <p class="text-2xl font-bold text-white">¡SORTEO FINALIZADO!</p>
-            <p class="text-white">El sorteo se realizó el 17 de junio de 2025.</p>`;
+            <p class="text-white">El sorteo se realizó el 16 de junio de 2025.</p>`;
         return;
     }
 
