@@ -193,28 +193,29 @@
         <footer class="p-6 bg-gray-900 text-center border-t border-gray-700 mt-4">
             <h3 class="text-xl font-semibold text-gray-200">El sorteo se realizará el</h3>
             <p class="text-3xl font-bold text-blue-400 mt-1">DOMINGO</p>
-            <div class="countdown-container" id="countdown">
-                <div class="countdown-item">
-                    <span id="days">00</span>
-                    <span>Días</span>
+            <div id="countdown" class="text-center">
+                <p class="text-2xl font-bold text-white">El sorteo se realizará el</p>
+                <p class="text-4xl font-bold text-white">LUNES</p>
+                <div class="flex gap-4 mt-4">
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <p class="text-white">00 Días</p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <p class="text-white">00 Horas</p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <p class="text-white">00 Minutos</p>
+                    </div>
+                    <div class="bg-white/10 p-4 rounded-lg">
+                        <p class="text-white">00 Segundos</p>
+                    </div>
                 </div>
-                <div class="countdown-item">
-                    <span id="hours">00</span>
-                    <span>Horas</span>
-                </div>
-                <div class="countdown-item">
-                    <span id="minutes">00</span>
-                    <span>Minutos</span>
-                </div>
-                <div class="countdown-item">
-                    <span id="seconds">00</span>
-                    <span>Segundos</span>
-                </div>
+                <p class="text-white mt-4">¡Mucho suerte a todos los participantes!</p>
             </div>
-            <p class="text-gray-400 mt-2">¡Mucha suerte a todos los participantes!</p>
         </footer>
     </div>
 
+    <script src="src/countdown.js"></script>
     <script>
         // --- Lógica para el Generador de Ideas con Gemini API ---
         const generateBtn = document.getElementById('generate-ideas-btn');
